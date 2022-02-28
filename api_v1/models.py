@@ -38,3 +38,13 @@ class studentSubject(record):
 
     def __str__(self):
          return str(self.studentId)
+
+class attendance(record):
+    studentId = models.ForeignKey(student,to_field="studentId",on_delete=models.CASCADE)
+    subjectCode = models.CharField(max_length=200, blank=False, null=False)
+    lectureDate = models.CharField(max_length=50, blank=False, null=False)
+    status = models.CharField(max_length=20, blank=False, null=False)
+
+    def __str__(self):
+         return str(self.studentId)
+         
