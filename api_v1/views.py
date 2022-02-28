@@ -20,3 +20,11 @@ class manageAttendanceRecord(RetrieveUpdateDestroyAPIView):
     serializer_class = attendanceSerializer
     lookup_url_kwarg = 'id'
     queryset = attendance.objects.all()
+
+class CreateStudent(ListCreateAPIView):
+    '''
+    This view is used to create a record and retrieve all records to student
+    '''
+
+    serializer_class = studentSerializer
+    queryset = student.objects.all()
