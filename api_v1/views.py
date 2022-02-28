@@ -37,3 +37,27 @@ class CreateStudent(ListCreateAPIView):
 
     serializer_class = studentSerializer
     queryset = student.objects.all()
+
+class CreateAttendance(ListCreateAPIView):
+    '''
+    This view is used to create a record and retrieve all records related to attandance
+    '''
+
+    serializer_class = attendanceSerializer
+    queryset = attendance.objects.all()
+
+
+
+class CreateSubject(ListCreateAPIView):
+    '''
+    This view is used to create a record and retrieve all records related to subjects
+    '''
+
+    serializer_class = subjectSerializer
+    queryset = subjects.objects.all()
+
+
+
+
+
+
