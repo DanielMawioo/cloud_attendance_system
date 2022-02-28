@@ -22,3 +22,13 @@ class student(record):
 
      def __str__(self):
          return str(self.studentId)
+
+
+class subjects(record):
+    subjectCode = models.AutoField(primary_key=True)
+    title = models.CharField(max_length=200, blank=False, null=False)
+    #department = models.ForeignKey(student,to_field="department",on_delete=models.CASCADE)
+
+    def __str__(self):
+         return str(self.subjectCode)
+
