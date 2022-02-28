@@ -32,3 +32,9 @@ class subjects(record):
     def __str__(self):
          return str(self.subjectCode)
 
+class studentSubject(record):
+    studentId = models.ForeignKey(student,to_field="studentId",on_delete=models.CASCADE)
+    subjectCode = models.ForeignKey(subjects,to_field="subjectCode",on_delete=models.CASCADE)
+
+    def __str__(self):
+         return str(self.studentId)
